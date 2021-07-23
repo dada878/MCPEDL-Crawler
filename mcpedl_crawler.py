@@ -1,7 +1,5 @@
-from sys import modules
 import urllib.request as req
 import bs4
-from googletrans import Translator
 # from color import colorprint
 
 def getData(url):
@@ -18,11 +16,12 @@ def getData(url):
     for title in titles:
         modtitle=(title.string.replace("\n", ""))
         print(modtitle)
+        #可自訂搜尋條件
+        #if modtitle.find("magic") != -1:
+        #    print(">> "+modtitle)
    
-
-#爬取模組頁數
-count = 300
-
+#搜索頁面數量
+count = 3
 
 
 getData("https://mcpedl.com/category/mods/")
